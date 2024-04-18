@@ -4,7 +4,7 @@
 - Version 0.5
 
 ## Changelog
-^ Date ^ Comment ^
+| Date | Comment |
 | ---- | ------- |
 | 20240419 #1 | Initial Commit |
 | 20240419 #2 | Added code to make buttons similar size |
