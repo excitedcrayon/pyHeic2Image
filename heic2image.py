@@ -67,7 +67,8 @@ class HEIC2Image:
         )
         self.openImageFilesButton.grid(
             row=1,
-            column=1
+            column=1,
+            sticky="ew"
         )
         # convert to JPG button
         self.convertToJPGButton = tk.Button(
@@ -77,7 +78,8 @@ class HEIC2Image:
         )
         self.convertToJPGButton.grid(
             row=1,
-            column=2
+            column=2,
+            sticky="ew"
         )
         # convert to PNG button
         self.convertToPNGButton = tk.Button(
@@ -87,7 +89,8 @@ class HEIC2Image:
         )
         self.convertToPNGButton.grid(
             row=1,
-            column=3
+            column=3,
+            sticky="ew"
         )
         # clear list button
         self.clearListButton = tk.Button(
@@ -97,7 +100,8 @@ class HEIC2Image:
         )
         self.clearListButton.grid(
             row=1,
-            column=4
+            column=4,
+            sticky="ew"
         )
         # close button
         self.closeButton = tk.Button(
@@ -107,8 +111,13 @@ class HEIC2Image:
         )
         self.closeButton.grid(
             row=1,
-            column=5
+            column=5,
+            sticky="ew"
         )
+
+        # Configure buttons to have same size and fill in row 2
+        for col in range(1, 6):
+            master.grid_columnconfigure(col, weight=1, uniform="buttons")        
 
         # configure grid weights to make label expandable
         master.grid_rowconfigure(0, weight=1)
