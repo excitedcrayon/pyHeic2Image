@@ -12,6 +12,7 @@ class HEIC2Image:
         master.title("HEIC 2 Image")
         master.geometry("600x600")
         master.resizable(False, False)
+        master.iconbitmap("logo.ico")
         self.filePaths = [] # list to store the opened multiple files
 
         # center the GUI
