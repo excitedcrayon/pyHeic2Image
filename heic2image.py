@@ -3,7 +3,7 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
 from pillow_heif import register_heif_opener
-from PIL import Image, ImageTk
+from PIL import Image
 
 
 class HEIC2Image:
