@@ -75,6 +75,9 @@ for col in range(1, 6):
 ```
 
 ## Video
+<video width="640" height="480" controls>
+  <source src="https://heic2image.app/demo.mp4" type="video/mp4">
+</video>
 
 ## Image
 <img src="readme/image1.png">
