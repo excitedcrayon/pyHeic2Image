@@ -160,7 +160,7 @@ class HEIC2Image:
 
     def convertToPNG(self, label):
         saveDirectory = filedialog.askdirectory(
-            title="Choose directory to save JPG image(s)"
+            title="Choose directory to save PNG image(s)"
         )      
         if saveDirectory:
             if self.filePaths:
