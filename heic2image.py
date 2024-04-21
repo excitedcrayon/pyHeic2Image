@@ -152,6 +152,7 @@ class HEIC2Image:
                     #update label to show converted files
                     updatedFile = jpgImage.split("/")[-1]
                     label.insert(tk.END, "Converted file: " + updatedFile + " saved\n")
+                self.getFileCountAndImageType(self.filePaths, 'jpg')
                 self.cleanUpFileListOnSave(label)
         else:
             label.insert(tk.END, "No HEIC files opened\nSave location not selected\nSkipping conversion...\n")
@@ -176,6 +177,7 @@ class HEIC2Image:
                     #update label to show converted files
                     updatedFile = pngImage.split("/")[-1]
                     label.insert(tk.END, updatedFile + "\n")
+                self.getFileCountAndImageType(self.filePaths, 'png')
                 self.cleanUpFileListOnSave(label)
         else:
             label.insert(tk.END, "No HEIC files opened\nSave location not selected\nSkipping conversion...\n")
@@ -183,7 +185,13 @@ class HEIC2Image:
 
     def cleanUpFileListOnSave(self, label):
         self.filePaths = []
-        label.insert(tk.END, "Cleaning up previously selected files...\nSelect new files to convert")
+        label.insert(tk.END, "Cleaning up previously selected files...\nSelect new files to convert or close the program")
+
+    def getFileCountAndImageType(self, list, imageType):
+        messagebox.showinfo(
+            "Conversion Complete",
+            str(len(list)) + " images have been converted to " + imageType
+        )
 
     def clearFileList(self, label):
         if len(self.filePaths) > 0:
@@ -196,7 +204,7 @@ class HEIC2Image:
         else:
             messagebox.showinfo(
                 "Info",
-                "Please select some HEIC images first"
+                "No image data to clear"
             )
 
     def closeWindow(self, master):
