@@ -2,6 +2,7 @@
 
 - A Python TKinter application to convert heic images to jpg/png
 - Version 0.5
+- <a href="https://heic2image.app">Website Link</a>
 
 ## Changelog
 | Date | Comment |
@@ -80,3 +81,8 @@ for col in range(1, 6):
 ## Image
 <img src="readme/image1.png">
 <img src="readme/image2.png">
+
+## Install dependencies using pip
+```
+    pip install pillow_heif
+```
